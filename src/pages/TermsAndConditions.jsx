@@ -6,8 +6,8 @@ function TermsAndConditions() {
         <p className="last-updated">Last Updated: October 31, 2025</p>
 
         <p>
-          Welcome to Fact App. These Terms and Conditions ("Terms") govern your access to and use of our 
-          mobile applications, including Facto, and our website at fact-app.com (collectively, the "Services"). 
+          Welcome to Facto. These Terms and Conditions ("Terms") govern your access to and use of our
+          mobile applications and our website at fact-app.com (collectively, the "Services").
           By accessing or using our Services, you agree to be bound by these Terms.
         </p>
 
@@ -103,8 +103,8 @@ function TermsAndConditions() {
 
         <h2>6. Intellectual Property</h2>
         <p>
-          The Services, including all content, features, and functionality, are owned by Fact App and are 
-          protected by copyright, trademark, and other intellectual property laws. Our trademarks and trade 
+          The Services, including all content, features, and functionality, are owned by Facto and are
+          protected by copyright, trademark, and other intellectual property laws. Our trademarks and trade
           dress may not be used without our prior written permission.
         </p>
 
@@ -146,8 +146,8 @@ function TermsAndConditions() {
 
         <h2>10. Limitation of Liability</h2>
         <p>
-          TO THE MAXIMUM EXTENT PERMITTED BY LAW, FACT APP SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, 
-          SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS OR REVENUES, WHETHER INCURRED 
+          TO THE MAXIMUM EXTENT PERMITTED BY LAW, FACTO SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL,
+          SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS OR REVENUES, WHETHER INCURRED
           DIRECTLY OR INDIRECTLY, OR ANY LOSS OF DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES RESULTING FROM:
         </p>
         <ul>
@@ -159,9 +159,9 @@ function TermsAndConditions() {
 
         <h2>11. Indemnification</h2>
         <p>
-          You agree to indemnify, defend, and hold harmless Fact App and its officers, directors, employees, 
-          and agents from any claims, liabilities, damages, losses, and expenses, including reasonable attorney 
-          fees, arising out of or in any way connected with your access to or use of the Services or your 
+          You agree to indemnify, defend, and hold harmless Facto and its officers, directors, employees,
+          and agents from any claims, liabilities, damages, losses, and expenses, including reasonable attorney
+          fees, arising out of or in any way connected with your access to or use of the Services or your
           violation of these Terms.
         </p>
 
@@ -181,8 +181,8 @@ function TermsAndConditions() {
 
         <h2>14. Governing Law</h2>
         <p>
-          These Terms shall be governed by and construed in accordance with the laws of the jurisdiction in 
-          which Fact App operates, without regard to its conflict of law provisions.
+          These Terms shall be governed by and construed in accordance with the laws of the jurisdiction in
+          which Facto operates, without regard to its conflict of law provisions.
         </p>
 
         <h2>15. Dispute Resolution</h2>

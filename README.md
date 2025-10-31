@@ -1,6 +1,6 @@
-# Fact App Website
+# Facto Website
 
-A modern, responsive business website for Fact App, showcasing the Facto productivity application and other projects.
+A modern, responsive business website for Facto, showcasing our productivity application and other projects.
 
 ## Features
 
@@ -156,7 +156,7 @@ Edit the CSS custom properties in `src/index.css`:
 
 ## License
 
-© 2025 Fact App. All rights reserved.
+© 2025 Facto. All rights reserved.
 
 ## Support
 

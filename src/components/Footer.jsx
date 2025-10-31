@@ -5,7 +5,7 @@ function Footer() {
     <footer>
       <div className="footer-content">
         <div className="footer-section">
-          <h3>Fact App</h3>
+          <h3>Facto</h3>
           <p style={{ color: 'rgba(255, 255, 255, 0.8)', lineHeight: '1.7' }}>
             Building innovative digital solutions that make a difference in people's lives.
           </p>
@@ -33,7 +33,7 @@ function Footer() {
         </div>
       </div>
       <div className="footer-bottom">
-        <p>&copy; 2025 Fact App. All rights reserved.</p>
+        <p>&copy; 2025 Facto. All rights reserved.</p>
       </div>
     </footer>
   )

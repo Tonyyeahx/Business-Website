@@ -6,9 +6,9 @@ function PrivacyPolicy() {
         <p className="last-updated">Last Updated: October 31, 2025</p>
 
         <p>
-          At Fact App ("we," "our," or "us"), we are committed to protecting your privacy and ensuring 
-          the security of your personal information. This Privacy Policy explains how we collect, use, 
-          disclose, and safeguard your information when you use our mobile applications, including Facto, 
+          At Facto ("we," "our," or "us"), we are committed to protecting your privacy and ensuring
+          the security of your personal information. This Privacy Policy explains how we collect, use,
+          disclose, and safeguard your information when you use our mobile applications
           and our website at fact-app.com.
         </p>
 

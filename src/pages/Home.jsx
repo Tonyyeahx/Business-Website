@@ -6,8 +6,8 @@ function Home() {
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-content">
-          <h1>Building Innovative Digital Solutions</h1>
-          <p>We create powerful mobile applications that enhance productivity and simplify everyday tasks.</p>
+          <h1>Learn Something New Every Day</h1>
+          <p>We create engaging mobile applications that make learning fun and accessible for everyone.</p>
           <a href="#projects" className="cta-button">Explore Our Projects</a>
         </div>
       </section>
@@ -16,10 +16,10 @@ function Home() {
       <div className="container">
         {/* About Section */}
         <section className="section">
-          <h2 className="section-title">Welcome to Fact App</h2>
+          <h2 className="section-title">Welcome to Facto</h2>
           <p className="section-subtitle">
-            We're dedicated to developing cutting-edge mobile applications that make a difference. 
-            Our mission is to create intuitive, powerful tools that help people accomplish more in their daily lives.
+            We're dedicated to making learning fun and accessible through innovative mobile applications.
+            Our mission is to spark curiosity and help people discover fascinating facts about the world around them.
           </p>
         </section>
 
@@ -33,11 +33,12 @@ function Home() {
           <div className="projects-grid">
             {/* Facto Project Card */}
             <div className="project-card">
-              <div className="project-icon">📊</div>
+              <div className="project-icon">💡</div>
               <h3>Facto</h3>
               <p>
-                A powerful productivity app designed to help you organize, track, and accomplish your goals 
-                with ease. Facto combines simplicity with powerful features to streamline your workflow.
+                Discover something new every day! Facto delivers fascinating fun facts straight to your device.
+                Choose from various categories and expand your knowledge one fact at a time. Free with unlimited
+                daily facts, or go premium for access to all categories.
               </p>
               <Link to="/facto" className="project-link">Learn More</Link>
             </div>

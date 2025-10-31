@@ -5,9 +5,9 @@ function Facto() {
     <div className="container">
       {/* App Header */}
       <div className="app-header">
-        <div className="app-icon-large">📊</div>
+        <div className="app-icon-large">💡</div>
         <h1 className="app-title">Facto</h1>
-        <p className="app-tagline">Productivity Made Simple</p>
+        <p className="app-tagline">Discover Fun Facts Every Day</p>
         
         <div className="download-buttons">
           <a href="#" className="download-btn">
@@ -25,9 +25,10 @@ function Facto() {
       <section className="section">
         <h2 className="section-title">About Facto</h2>
         <p className="section-subtitle">
-          Facto is your ultimate productivity companion, designed to help you organize your tasks, 
-          track your progress, and accomplish your goals with ease. Whether you're managing personal 
-          projects or professional workflows, Facto provides the tools you need to stay focused and productive.
+          Facto is your daily dose of knowledge and curiosity! Get fascinating fun facts delivered to your
+          device every day. From science and history to nature and technology, expand your knowledge one
+          interesting fact at a time. Whether you're a trivia enthusiast or just love learning new things,
+          Facto makes discovering the world's wonders fun and effortless.
         </p>
       </section>
 
@@ -36,34 +37,74 @@ function Facto() {
         <h2 className="section-title">Key Features</h2>
         <div className="features-grid">
           <div className="feature-item">
-            <div className="feature-icon">✅</div>
-            <h3>Task Management</h3>
-            <p>Create, organize, and prioritize your tasks with an intuitive interface that makes productivity effortless.</p>
+            <div className="feature-icon">📅</div>
+            <h3>Daily Fun Facts</h3>
+            <p>Receive fascinating facts delivered to your device every day. Learn something new without any effort!</p>
           </div>
           <div className="feature-item">
-            <div className="feature-icon">📈</div>
-            <h3>Progress Tracking</h3>
-            <p>Monitor your achievements and stay motivated with visual progress indicators and statistics.</p>
+            <div className="feature-icon">🎯</div>
+            <h3>Unlimited Facts</h3>
+            <p>Get as many facts as you want, every single day. No limits on how much you can learn!</p>
+          </div>
+          <div className="feature-item">
+            <div className="feature-icon">📚</div>
+            <h3>Multiple Categories</h3>
+            <p>Explore facts from various categories including Science, History, Nature, Technology, and more!</p>
+          </div>
+          <div className="feature-item">
+            <div className="feature-icon">🔔</div>
+            <h3>Push Notifications</h3>
+            <p>Get notified when new facts are available. Never miss your daily dose of knowledge!</p>
           </div>
           <div className="feature-item">
             <div className="feature-icon">🎨</div>
             <h3>Beautiful Design</h3>
-            <p>Enjoy a clean, modern interface that's both aesthetically pleasing and highly functional.</p>
+            <p>Enjoy a clean, modern interface that makes reading facts a delightful experience.</p>
           </div>
           <div className="feature-item">
-            <div className="feature-icon">🔔</div>
-            <h3>Smart Reminders</h3>
-            <p>Never miss a deadline with intelligent notifications that keep you on track.</p>
+            <div className="feature-icon">⚡</div>
+            <h3>Fast & Simple</h3>
+            <p>Quick to load, easy to use. Get your facts instantly with just a tap.</p>
           </div>
-          <div className="feature-item">
-            <div className="feature-icon">☁️</div>
-            <h3>Cloud Sync</h3>
-            <p>Access your tasks from anywhere with seamless cloud synchronization across all your devices.</p>
+        </div>
+      </section>
+
+      {/* Subscription Plans */}
+      <section className="section">
+        <h2 className="section-title">Choose Your Plan</h2>
+        <div className="projects-grid">
+          <div className="project-card">
+            <div className="project-icon">🆓</div>
+            <h3>Free</h3>
+            <p style={{ fontSize: '2rem', fontWeight: 'bold', color: 'var(--primary-color)', margin: '1rem 0' }}>$0</p>
+            <ul style={{ textAlign: 'left', color: 'var(--text-light)', lineHeight: '2' }}>
+              <li>✅ Unlimited facts per day</li>
+              <li>✅ One category of your choice</li>
+              <li>✅ Daily push notifications</li>
+              <li>✅ Beautiful interface</li>
+            </ul>
+            <p style={{ marginTop: '1.5rem', color: 'var(--text-light)' }}>
+              Perfect for casual learners who want to explore one topic in depth.
+            </p>
           </div>
-          <div className="feature-item">
-            <div className="feature-icon">🌙</div>
-            <h3>Dark Mode</h3>
-            <p>Reduce eye strain and work comfortably in any lighting condition with our elegant dark mode.</p>
+          <div className="project-card" style={{ border: '2px solid var(--primary-color)', position: 'relative' }}>
+            <div style={{ position: 'absolute', top: '-12px', left: '50%', transform: 'translateX(-50%)', backgroundColor: 'var(--primary-color)', color: 'white', padding: '0.25rem 1rem', borderRadius: '1rem', fontSize: '0.875rem', fontWeight: 'bold' }}>
+              POPULAR
+            </div>
+            <div className="project-icon">⭐</div>
+            <h3>Premium</h3>
+            <p style={{ fontSize: '2rem', fontWeight: 'bold', color: 'var(--primary-color)', margin: '1rem 0' }}>Coming Soon</p>
+            <ul style={{ textAlign: 'left', color: 'var(--text-light)', lineHeight: '2' }}>
+              <li>✅ Unlimited facts per day</li>
+              <li>✅ <strong>All categories available</strong></li>
+              <li>✅ Daily push notifications</li>
+              <li>✅ Beautiful interface</li>
+              <li>✅ Ad-free experience</li>
+              <li>✅ Priority support</li>
+            </ul>
+            <p style={{ marginTop: '1.5rem', color: 'var(--text-light)' }}>
+              For knowledge enthusiasts who want unlimited access to all topics.
+            </p>
           </div>
         </div>
       </section>
@@ -74,26 +115,26 @@ function Facto() {
         <div className="projects-grid">
           <div className="project-card">
             <div className="project-icon">1️⃣</div>
-            <h3>Create Your Tasks</h3>
+            <h3>Download & Choose</h3>
             <p>
-              Quickly add tasks with just a few taps. Organize them into projects, 
-              set priorities, and add detailed descriptions.
+              Download Facto and select your favorite category. Free users pick one,
+              premium users get access to all!
             </p>
           </div>
           <div className="project-card">
             <div className="project-icon">2️⃣</div>
-            <h3>Stay Organized</h3>
+            <h3>Receive Daily Facts</h3>
             <p>
-              Use categories, tags, and filters to keep everything organized. 
-              View your tasks in multiple layouts to suit your workflow.
+              Get fascinating facts pushed to your device every day. Learn something
+              new without lifting a finger!
             </p>
           </div>
           <div className="project-card">
             <div className="project-icon">3️⃣</div>
-            <h3>Accomplish More</h3>
+            <h3>Expand Your Knowledge</h3>
             <p>
-              Track your progress, celebrate your achievements, and build productive 
-              habits that help you reach your goals.
+              Read unlimited facts daily, share with friends, and become a trivia master.
+              Learning has never been this fun!
             </p>
           </div>
         </div>
