@@ -14,7 +14,7 @@ function TermsAndConditions() {
         <p>
           <strong>About Facto:</strong> Facto is a fact-discovery app that delivers curated, fascinating facts
           through an engaging swipe-based interface. You can browse facts from 36+ categories, save your favorites,
-          and receive scheduled notifications with interesting facts.
+          and receive scheduled notifications with interesting facts. No account creation is required.
         </p>
 
         <h2>1. Acceptance of Terms</h2>
@@ -31,39 +31,16 @@ function TermsAndConditions() {
           and warrant that you meet these eligibility requirements.
         </p>
 
-        <h2>3. User Accounts</h2>
-
-        <h3>3.1 Anonymous Use</h3>
+        <h2>3. Use Without Account</h2>
         <p>
-          You can use Facto without creating an account. Anonymous users can browse facts, save favorites locally,
-          and customize their experience. However, data will not sync across devices and will be lost if you
-          uninstall the app.
+          Facto does not require account creation. You can use all features of the app without providing
+          personal information. All your data (saved facts, preferences, settings) is stored locally on
+          your device and is not synced to external servers.
         </p>
-
-        <h3>3.2 Optional Authentication</h3>
         <p>
-          You may optionally sign in with Apple or Google to sync your preferences and saved facts across devices.
-          When you sign in, you agree to provide accurate information from your authentication provider.
-        </p>
-
-        <h3>3.3 Account Security</h3>
-        <p>
-          If you create an account, you are responsible for maintaining the security of your authentication
-          credentials and for all activities that occur under your account. You agree to:
-        </p>
-        <ul>
-          <li>Keep your authentication credentials secure</li>
-          <li>Not share your account with others</li>
-          <li>Notify us immediately of any unauthorized access or security breach</li>
-          <li>Accept responsibility for all activities under your account</li>
-        </ul>
-
-        <h3>3.4 Account Termination</h3>
-        <p>
-          We reserve the right to suspend or terminate your account at any time, with or without notice,
-          for violation of these Terms or for any other reason we deem appropriate. You may delete your
-          account at any time by contacting us at{' '}
-          <a href="mailto:contact@facto-app.com" style={{ color: 'var(--primary-color)' }}>contact@facto-app.com</a>.
+          <strong>Note:</strong> Since data is stored locally, uninstalling the app will delete all your
+          saved facts and preferences. We recommend periodically backing up your device if you want to
+          preserve your data.
         </p>
 
         <h2>4. Use of Services</h2>
@@ -141,16 +118,9 @@ function TermsAndConditions() {
 
         <h2>7. Third-Party Services</h2>
         <p>
-          Our Services integrate with the following third-party services:
-        </p>
-        <ul>
-          <li><strong>Firebase (Google Cloud Platform):</strong> For cloud storage and data sync (authenticated users only)</li>
-          <li><strong>Google Sign-In:</strong> For optional authentication</li>
-          <li><strong>Sign in with Apple:</strong> For optional authentication</li>
-        </ul>
-        <p>
-          Your use of these third-party services is subject to their respective terms of service and privacy policies.
-          We are not responsible for the practices of these third parties.
+          Facto currently does not integrate with any third-party services for data storage, analytics,
+          or authentication. All data is stored locally on your device. The app fetches facts from our
+          servers, but does not send any personal information or usage data back.
         </p>
 
         <h2>8. Notifications</h2>
@@ -251,9 +221,9 @@ function TermsAndConditions() {
         <div style={{ marginTop: '3rem', padding: '1.5rem', backgroundColor: 'var(--bg-light)', borderRadius: '0.5rem' }}>
           <p style={{ margin: 0, color: 'var(--text-light)' }}>
             <strong>Note:</strong> These terms and conditions are designed to comply with iOS App Store requirements
-            and general legal standards. Facto is an educational and entertainment app that provides curated facts.
-            Please consult with a legal professional to ensure these terms meet all applicable requirements for
-            your specific jurisdiction and use case.
+            and general legal standards. Facto is an educational and entertainment app that provides curated facts
+            with no account required and all data stored locally on your device. Please consult with a legal
+            professional to ensure these terms meet all applicable requirements for your specific jurisdiction and use case.
           </p>
         </div>
       </div>
