@@ -1,9 +1,20 @@
 /* Footer */
 footer {
-  background-color: var(--text-dark);
+  background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
   color: white;
-  padding: 3rem 2rem 1.5rem;
-  margin-top: 4rem;
+  padding: 4rem 2rem 2rem;
+  margin-top: 6rem;
+  position: relative;
+}
+
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.5), transparent);
 }
 
 .footer-content {
@@ -16,8 +27,10 @@ footer {
 }
 
 .footer-section h3 {
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
   font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--accent-color);
 }
 
 .footer-section ul {
@@ -29,22 +42,26 @@ footer {
 }
 
 .footer-section a {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.7);
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
 .footer-section a:hover {
-  color: white;
+  color: var(--accent-color);
+  padding-left: 4px;
 }
 
 .footer-bottom {
   max-width: 1200px;
   margin: 0 auto;
-  padding-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 2.5rem;
+  margin-top: 2rem;
+  border-top: 1px solid rgba(139, 92, 246, 0.2);
   text-align: center;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.9375rem;
 }
 
 /* Responsive Design */
