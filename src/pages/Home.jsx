@@ -103,8 +103,8 @@ function Home() {
           <h2 className="section-title">Get in Touch</h2>
           <p className="section-subtitle">
             Have questions or feedback? We'd love to hear from you. Reach out to us at{' '}
-            <a href="mailto:contact@fact-app.com" style={{ color: 'var(--primary-color)', textDecoration: 'none', fontWeight: 600 }}>
-              contact@fact-app.com
+            <a href="mailto:contact@facto-app.com" style={{ color: 'var(--primary-color)', textDecoration: 'none', fontWeight: 600 }}>
+              contact@facto-app.com
             </a>
           </p>
         </section>

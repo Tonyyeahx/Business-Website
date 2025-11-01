@@ -14,14 +14,12 @@ function Footer() {
           <h3>Products</h3>
           <ul>
             <li><Link to="/facto">Facto</Link></li>
-            <li><Link to="/#projects">All Projects</Link></li>
           </ul>
         </div>
         <div className="footer-section">
           <h3>Contact</h3>
           <ul>
-            <li><a href="mailto:contact@fact-app.com">contact@fact-app.com</a></li>
-            <li><a href="mailto:support@fact-app.com">support@fact-app.com</a></li>
+            <li><a href="mailto:contact@facto-app.com">contact@facto-app.com</a></li>
           </ul>
         </div>
       </div>

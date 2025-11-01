@@ -92,13 +92,13 @@ vercel
 
 1. In your Vercel project dashboard, go to "Settings" → "Domains"
 
-2. Add your custom domain: `fact-app.com`
+2. Add your custom domain: `facto-app.com`
 
 3. Follow Vercel's instructions to configure your DNS settings:
    - Add an A record pointing to Vercel's IP: `76.76.21.21`
    - Or add a CNAME record pointing to `cname.vercel-dns.com`
 
-4. Add `www.fact-app.com` as well (optional)
+4. Add `www.facto-app.com` as well (optional)
 
 5. Vercel will automatically provision SSL certificates
 
@@ -161,6 +161,6 @@ Edit the CSS custom properties in `src/index.css`:
 ## Support
 
 For questions or support, contact:
-- Email: support@fact-app.com
-- Website: https://fact-app.com
+- Email: contact@facto-app.com
+- Website: https://facto-app.com
 

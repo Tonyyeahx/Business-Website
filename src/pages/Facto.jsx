@@ -86,7 +86,7 @@ function Facto() {
               Perfect for casual learners who want to explore one topic in depth.
             </p>
           </div>
-          <div className="project-card" style={{ border: '2px solid var(--primary-color)', position: 'relative' }}>
+          <div className="project-card" style={{ border: '2px solid var(--primary-color)', position: 'relative', overflow: 'visible' }}>
             <div style={{ position: 'absolute', top: '-12px', left: '50%', transform: 'translateX(-50%)', backgroundColor: 'var(--primary-color)', color: 'white', padding: '0.25rem 1rem', borderRadius: '1rem', fontSize: '0.875rem', fontWeight: 'bold' }}>
               POPULAR
             </div>
@@ -171,8 +171,8 @@ function Facto() {
         <p className="section-subtitle">
           We're here to help! If you have any questions, feedback, or need support, 
           please don't hesitate to reach out to us at{' '}
-          <a href="mailto:support@fact-app.com" style={{ color: 'var(--primary-color)', textDecoration: 'none', fontWeight: 600 }}>
-            support@fact-app.com
+          <a href="mailto:contact@facto-app.com" style={{ color: 'var(--primary-color)', textDecoration: 'none', fontWeight: 600 }}>
+            contact@facto-app.com
           </a>
         </p>
         <div style={{ textAlign: 'center', marginTop: '2rem' }}>
