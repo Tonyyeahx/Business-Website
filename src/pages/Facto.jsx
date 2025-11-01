@@ -67,7 +67,7 @@ function Facto() {
 
       {/* Subscription Plans */}
       <section className="section">
-        <h2 className="section-title">Choose Your Plan</h2>
+        <h2 className="section-title">Plans</h2>
         <div className="projects-grid">
           <div className="project-card">
             <div className="project-icon">🆓</div>
@@ -89,13 +89,12 @@ function Facto() {
             </div>
             <div className="project-icon">⭐</div>
             <h3>Premium</h3>
-            <p style={{ fontSize: '2rem', fontWeight: 'bold', color: 'var(--primary-color)', margin: '1rem 0' }}>Coming Soon</p>
+            <p style={{ fontSize: '2rem', fontWeight: 'bold', color: 'var(--primary-color)', margin: '1rem 0' }}>$2.79</p>
             <ul style={{ textAlign: 'left', color: 'var(--text-light)', lineHeight: '2' }}>
               <li>✅ Unlimited facts per day</li>
               <li>✅ <strong>All categories available</strong></li>
               <li>✅ Daily push notifications</li>
               <li>✅ Beautiful interface</li>
-              <li>✅ Ad-free experience</li>
               <li>✅ Priority support</li>
             </ul>
             <p style={{ marginTop: '1.5rem', color: 'var(--text-light)' }}>
@@ -156,15 +155,8 @@ function Facto() {
           <div className="project-card">
             <h3>iOS</h3>
             <p>
-              <strong>Requires:</strong> iOS 14.0 or later<br />
+              <strong>Requires:</strong> iOS 17.0 or later<br />
               <strong>Compatible with:</strong> iPhone, iPad, and iPod touch
-            </p>
-          </div>
-          <div className="project-card">
-            <h3>Android</h3>
-            <p>
-              <strong>Requires:</strong> Android 8.0 or later<br />
-              <strong>Compatible with:</strong> Most Android smartphones and tablets
             </p>
           </div>
         </div>

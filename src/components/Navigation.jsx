@@ -8,8 +8,6 @@ function Navigation() {
         <ul className="nav-links">
           <li><Link to="/">Home</Link></li>
           <li><Link to="/facto">Facto</Link></li>
-          <li><Link to="/privacy-policy">Privacy</Link></li>
-          <li><Link to="/terms-and-conditions">Terms</Link></li>
         </ul>
       </div>
     </nav>

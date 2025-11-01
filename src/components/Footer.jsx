@@ -18,13 +18,6 @@ function Footer() {
           </ul>
         </div>
         <div className="footer-section">
-          <h3>Legal</h3>
-          <ul>
-            <li><Link to="/privacy-policy">Privacy Policy</Link></li>
-            <li><Link to="/terms-and-conditions">Terms & Conditions</Link></li>
-          </ul>
-        </div>
-        <div className="footer-section">
           <h3>Contact</h3>
           <ul>
             <li><a href="mailto:contact@fact-app.com">contact@fact-app.com</a></li>
