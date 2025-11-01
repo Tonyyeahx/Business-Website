@@ -14,10 +14,6 @@ function Facto() {
             <span>📱</span>
             <span>Download on the App Store</span>
           </a>
-          <a href="#" className="download-btn">
-            <span>🤖</span>
-            <span>Get it on Google Play</span>
-          </a>
         </div>
       </div>
 
