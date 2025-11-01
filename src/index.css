@@ -29,6 +29,51 @@ body {
   min-height: 100vh;
 }
 
+/* Rive Animation Styles */
+.rive-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.rive-container canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+.hero-animation {
+  border-radius: 20px;
+  filter: drop-shadow(0 10px 30px rgba(139, 92, 246, 0.3));
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Animated Hero Icon (placeholder for Rive) */
+.hero-icon-animated {
+  font-size: 8rem;
+  margin: 0 auto 2rem;
+  animation: float 6s ease-in-out infinite, glow 2s ease-in-out infinite;
+  filter: drop-shadow(0 10px 30px rgba(139, 92, 246, 0.4));
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    filter: drop-shadow(0 10px 30px rgba(139, 92, 246, 0.4));
+  }
+  50% {
+    filter: drop-shadow(0 15px 40px rgba(139, 92, 246, 0.7));
+  }
+}
+
 /* Navigation */
 nav {
   background: rgba(255, 255, 255, 0.9);

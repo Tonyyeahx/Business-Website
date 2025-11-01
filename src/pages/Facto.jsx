@@ -1,10 +1,13 @@
 import { Link } from 'react-router-dom'
+import RiveAnimation from '../components/RiveAnimation'
 
 function Facto() {
   return (
     <div className="container">
       {/* App Header */}
       <div className="app-header">
+        {/* Replace with your Facto app icon Rive animation */}
+        {/* Example: <div className="app-icon-large"><RiveAnimation src="/animations/facto-icon.riv" style={{ width: '100%', height: '100%' }} /></div> */}
         <div className="app-icon-large">💡</div>
         <h1 className="app-title">Facto</h1>
         <p className="app-tagline">Discover Fun Facts Every Day</p>

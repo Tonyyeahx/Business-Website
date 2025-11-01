@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import RiveAnimation from '../components/RiveAnimation'
 
 function Home() {
   return (
@@ -6,6 +7,9 @@ function Home() {
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-content">
+          {/* Replace with your learning-themed Rive animation */}
+          {/* Example: <RiveAnimation src="/animations/lightbulb.riv" className="hero-animation" style={{ width: '100%', maxWidth: '400px', height: '300px', margin: '0 auto 2rem' }} /> */}
+          <div className="hero-icon-animated">💡</div>
           <h1>Learn Something New Every Day</h1>
           <p>We create engaging mobile applications that make learning fun and accessible for everyone.</p>
           <a href="#projects" className="cta-button">Explore Our Projects</a>
