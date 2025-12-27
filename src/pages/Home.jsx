@@ -402,8 +402,7 @@ function Home() {
                 <p className="pricing-tier__price">$0</p>
               </div>
               <ul className="pricing-tier__features">
-                <li>Access to select categories</li>
-                <li>Daily fact limit</li>
+                  <li>Trivia category only</li>
                 <li>Save your favorites</li>
                 <li>Daily notifications</li>
               </ul>

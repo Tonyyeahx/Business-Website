@@ -150,18 +150,29 @@
   user-select: none;
 }
 
-/* Add padding to ensure first and last items are fully visible */
-.screenshots-track::before,
-.screenshots-track::after {
-  content: '';
-  flex-shrink: 0;
-  width: max(0px, calc((100vw - var(--container-max)) / 2));
-}
+/* Full-bleed carousel on large screens (wider than the container) */
+@media (min-width: 1024px) {
+  .screenshots-carousel {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+  }
 
-@media (max-width: 1200px) {
-  .screenshots-track::before,
-  .screenshots-track::after {
-    width: 0;
+  /* Keep the first card aligned with the container edge, while letting the
+     carousel extend full width. */
+  .screenshots-track {
+    padding-left: max(var(--space-lg), calc((100vw - var(--container-max)) / 2 + var(--space-lg)));
+    padding-right: max(var(--space-lg), calc((100vw - var(--container-max)) / 2 + var(--space-lg)));
+    scroll-padding-left: max(var(--space-lg), calc((100vw - var(--container-max)) / 2 + var(--space-lg)));
+    scroll-padding-right: max(var(--space-lg), calc((100vw - var(--container-max)) / 2 + var(--space-lg)));
+  }
+
+  .screenshots-nav--left {
+    left: max(var(--space-lg), calc((100vw - var(--container-max)) / 2 + var(--space-lg)));
+  }
+
+  .screenshots-nav--right {
+    right: max(var(--space-lg), calc((100vw - var(--container-max)) / 2 + var(--space-lg)));
   }
 }
 
@@ -274,9 +285,12 @@
     justify-content: center;
   }
   
-  .screenshots-track::before,
-  .screenshots-track::after {
-    display: none;
+  /* No extra edge padding needed when everything fits */
+  .screenshots-track {
+    padding-left: var(--space-lg);
+    padding-right: var(--space-lg);
+    scroll-padding-left: var(--space-lg);
+    scroll-padding-right: var(--space-lg);
   }
 }
 
