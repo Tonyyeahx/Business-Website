@@ -73,8 +73,8 @@ function PrivacyPolicy() {
           <p>All data is stored locally on your iOS device:</p>
           <ul>
             <li><strong>Technology:</strong> CoreData (Apple's local database framework)</li>
-            <li><strong>Data Stored:</strong> Cached facts, saved facts, user preferences, viewed fact history</li>
-            <li><strong>Retention:</strong> Cache is periodically cleared when the app enters background; saved facts persist until you delete them</li>
+            <li><strong>Data Stored:</strong> Saved facts, user preferences, viewed fact history</li>
+            <li><strong>Retention:</strong> Saved facts persist until you delete them</li>
             <li><strong>Deletion:</strong> All local data is removed when you uninstall the app</li>
             <li><strong>No Cloud Storage:</strong> Your data is never transmitted to or stored on external servers</li>
           </ul>
@@ -163,7 +163,6 @@ function PrivacyPolicy() {
           <h2>9. Data Retention</h2>
           <ul>
             <li><strong>Local Storage:</strong> All data is stored locally on your device and deleted when you uninstall the app</li>
-            <li><strong>Cached Facts:</strong> Automatically cleared when the app enters background to manage storage</li>
             <li><strong>Saved Facts:</strong> Persist on your device until you delete them or uninstall the app</li>
             <li><strong>Viewed Facts History:</strong> Retained locally to improve user experience by avoiding duplicate facts</li>
           </ul>

@@ -151,8 +151,8 @@ function Home() {
       )
     },
     {
-      title: 'Works Offline',
-      description: 'Facts are cached locally. Learn anywhere, anytime—no internet required.',
+      title: 'Fresh facts, online',
+      description: 'Facto needs an internet connection to load facts from our servers, so you always get the latest content.',
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
           <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />

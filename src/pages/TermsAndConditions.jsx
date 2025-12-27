@@ -134,8 +134,8 @@ function TermsAndConditions() {
             <li>Your iOS device settings</li>
           </ul>
           <p>
-            Notifications are delivered locally on your device and do not require an internet connection once
-            facts are cached.
+            Notifications are delivered locally on your device. Some app features (including loading facts)
+            require an internet connection.
           </p>
 
           <h2>9. Disclaimers</h2>
