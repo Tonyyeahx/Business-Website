@@ -137,7 +137,12 @@
   gap: var(--space-xl);
   padding: var(--space-lg) var(--space-lg);
   overflow-x: auto;
-  scroll-snap-type: x mandatory;
+  /* 'mandatory' + center-snapping can auto-snap on load in some desktop browsers,
+     causing the first item to appear half-cut. 'proximity' keeps snapping but
+     avoids that initial jump. */
+  scroll-snap-type: x proximity;
+  /* Ensure snap points align with our padded start */
+  scroll-padding-left: var(--space-lg);
   scrollbar-width: none;
   -ms-overflow-style: none;
   -webkit-overflow-scrolling: touch;
@@ -225,7 +230,8 @@
 
 .screenshot-item {
   flex: 0 0 auto;
-  scroll-snap-align: center;
+  /* Start-align prevents initial half-cut rendering on some browsers */
+  scroll-snap-align: start;
   display: flex;
   flex-direction: column;
   align-items: center;

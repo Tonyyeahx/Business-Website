@@ -46,6 +46,11 @@ function Home() {
     if (track) {
       track.addEventListener('scroll', updateScrollButtons)
       updateScrollButtons()
+      // Force a clean initial position; some browsers may auto-snap on load.
+      const raf = requestAnimationFrame(() => {
+        track.scrollTo({ left: 0, behavior: 'auto' })
+        updateScrollButtons()
+      })
       
       // Update on resize
       window.addEventListener('resize', updateScrollButtons)
@@ -53,6 +58,7 @@ function Home() {
       return () => {
         track.removeEventListener('scroll', updateScrollButtons)
         window.removeEventListener('resize', updateScrollButtons)
+        cancelAnimationFrame(raf)
       }
     }
   }, [])
