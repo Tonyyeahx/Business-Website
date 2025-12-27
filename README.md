@@ -1,166 +1,89 @@
-# Facto Website
+# Facto — Marketing Website
 
-A modern, responsive business website for Facto, showcasing our productivity application and other projects.
+A clean, premium landing page for the Facto iOS app.
+
+## About Facto
+
+Facto is a premium iOS app that helps users discover interesting, high-quality facts in seconds. Users explore facts through a calm, swipe-based interface, with 20+ curated categories covering Science, History, Technology, Psychology, Art, and more.
 
 ## Features
 
-- 🎨 Modern, clean design with responsive layout
-- ⚡ Built with React and Vite for optimal performance
-- 🧭 Client-side routing with React Router
-- 📱 Mobile-friendly and accessible
-- 🔒 Privacy Policy and Terms & Conditions pages for App Store compliance
-- 🚀 Optimized for Vercel deployment
+- **Modern Design**: Clean, minimal aesthetic with premium feel
+- **Dark Mode**: Automatic light/dark mode based on system preference
+- **Mobile-First**: Fully responsive across all devices
+- **Fast Loading**: Built with Vite for optimal performance
+- **SEO-Ready**: Proper meta tags and semantic HTML
 
 ## Tech Stack
 
-- **React 18** - UI library
-- **Vite** - Build tool and dev server
-- **React Router** - Client-side routing
-- **CSS3** - Styling with CSS custom properties
+- React 18
+- React Router
+- Vite
+- CSS Variables for theming
 
 ## Getting Started
 
-### Prerequisites
-
-- Node.js 16+ and npm
-
-### Installation
-
-1. Clone the repository:
 ```bash
-git clone <your-repo-url>
-cd Business-Website
-```
-
-2. Install dependencies:
-```bash
+# Install dependencies
 npm install
-```
 
-3. Start the development server:
-```bash
+# Start development server
 npm run dev
-```
 
-The site will be available at `http://localhost:5173`
-
-### Build for Production
-
-```bash
+# Build for production
 npm run build
-```
 
-This creates an optimized production build in the `dist` folder.
-
-### Preview Production Build
-
-```bash
+# Preview production build
 npm run preview
 ```
-
-## Deployment to Vercel
-
-### Option 1: Deploy via Vercel CLI
-
-1. Install Vercel CLI:
-```bash
-npm install -g vercel
-```
-
-2. Deploy:
-```bash
-vercel
-```
-
-3. Follow the prompts to link your project and deploy.
-
-### Option 2: Deploy via Vercel Dashboard
-
-1. Push your code to a Git repository (GitHub, GitLab, or Bitbucket)
-
-2. Go to [Vercel Dashboard](https://vercel.com/dashboard)
-
-3. Click "Add New Project"
-
-4. Import your Git repository
-
-5. Vercel will automatically detect the Vite configuration
-
-6. Click "Deploy"
-
-### Custom Domain Setup
-
-1. In your Vercel project dashboard, go to "Settings" → "Domains"
-
-2. Add your custom domain: `facto-app.com`
-
-3. Follow Vercel's instructions to configure your DNS settings:
-   - Add an A record pointing to Vercel's IP: `76.76.21.21`
-   - Or add a CNAME record pointing to `cname.vercel-dns.com`
-
-4. Add `www.facto-app.com` as well (optional)
-
-5. Vercel will automatically provision SSL certificates
 
 ## Project Structure
 
 ```
-Business-Website/
-├── public/              # Static assets
-├── src/
-│   ├── components/      # React components
-│   │   ├── Navigation.jsx
-│   │   └── Footer.jsx
-│   ├── pages/          # Page components
-│   │   ├── Home.jsx
-│   │   ├── Facto.jsx
-│   │   ├── PrivacyPolicy.jsx
-│   │   └── TermsAndConditions.jsx
-│   ├── App.jsx         # Main app component
-│   ├── App.css         # App-specific styles
-│   ├── main.jsx        # Entry point
-│   └── index.css       # Global styles
-├── index.html          # HTML template
-├── package.json        # Dependencies
-├── vite.config.js      # Vite configuration
-└── vercel.json         # Vercel configuration
+src/
+├── components/
+│   ├── Navigation.jsx
+│   ├── Navigation.css
+│   ├── Footer.jsx
+│   └── Footer.css
+├── pages/
+│   ├── Home.jsx
+│   ├── Home.css
+│   ├── PrivacyPolicy.jsx
+│   └── TermsAndConditions.jsx
+├── App.jsx
+├── App.css
+├── index.css
+└── main.jsx
 ```
-
-## Pages
-
-- **Home** (`/`) - Landing page showcasing projects
-- **Facto** (`/facto`) - Detailed information about the Facto app
-- **Privacy Policy** (`/privacy-policy`) - Privacy policy for App Store compliance
-- **Terms & Conditions** (`/terms-and-conditions`) - Terms of service
 
 ## Customization
 
 ### Colors
 
-Edit the CSS custom properties in `src/index.css`:
+Edit the CSS variables in `src/index.css` to customize the color scheme:
 
 ```css
 :root {
-  --primary-color: #2563eb;
-  --secondary-color: #1e40af;
-  --accent-color: #3b82f6;
+  --bg-primary: #FAFAFA;
+  --text-primary: #1A1A1A;
+  --accent: #2D2D2D;
   /* ... */
 }
 ```
 
-### Content
+### Fonts
 
-- Update page content in `src/pages/`
-- Modify navigation in `src/components/Navigation.jsx`
-- Update footer in `src/components/Footer.jsx`
+The site uses:
+- **Instrument Serif** for headings
+- **Manrope** for body text
+
+These are loaded from Google Fonts.
+
+## Deployment
+
+The site is configured for Vercel deployment. Simply connect your repository to Vercel for automatic deployments.
 
 ## License
 
-© 2025 Facto. All rights reserved.
-
-## Support
-
-For questions or support, contact:
-- Email: contact@facto-app.com
-- Website: https://facto-app.com
-
+All rights reserved.

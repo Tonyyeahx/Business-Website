@@ -1,0 +1,663 @@
+/* ============================================
+   Home Page Styles
+   ============================================ */
+
+/* Fade-in section animation */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================
+   Section Header
+   ============================================ */
+
+.section-header {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto var(--space-4xl);
+}
+
+.section-header h2 {
+  margin-bottom: var(--space-md);
+}
+
+.section-header p {
+  margin: 0 auto;
+}
+
+/* ============================================
+   Hero Section
+   ============================================ */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 80px;
+  padding-bottom: var(--space-4xl);
+  overflow: hidden;
+}
+
+.hero__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--gradient-hero);
+  pointer-events: none;
+}
+
+.hero .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4xl);
+  align-items: center;
+}
+
+.hero__content {
+  max-width: 560px;
+}
+
+.hero__eyebrow {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  margin-bottom: var(--space-lg);
+}
+
+.hero__title {
+  margin-bottom: var(--space-xl);
+  line-height: 1.1;
+}
+
+.hero__title--italic {
+  font-style: italic;
+  color: var(--text-secondary);
+}
+
+.hero__subtitle {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  margin-bottom: var(--space-2xl);
+  max-width: 480px;
+}
+
+.hero__cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.hero__visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Hero Phone - Using actual screenshot */
+.hero-phone {
+  position: relative;
+  animation: float 6s ease-in-out infinite;
+}
+
+.hero-phone__image {
+  width: 320px;
+  height: auto;
+  border-radius: 24px;
+  box-shadow: var(--shadow-xl);
+  display: block;
+}
+
+/* ============================================
+   Screenshots Carousel Section
+   ============================================ */
+
+.screenshots {
+  background: var(--bg-secondary);
+  overflow: hidden;
+}
+
+.screenshots-carousel {
+  position: relative;
+  margin: 0 calc(var(--space-lg) * -1);
+  padding: 0 var(--space-lg);
+}
+
+.screenshots-track {
+  display: flex;
+  gap: var(--space-xl);
+  padding: var(--space-lg) 0;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.screenshots-track::-webkit-scrollbar {
+  display: none;
+}
+
+.screenshot-item {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.screenshot-item__image-wrapper {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.screenshot-item:hover .screenshot-item__image-wrapper {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+}
+
+.screenshot-item__image {
+  width: 260px;
+  height: auto;
+  display: block;
+  border-radius: 24px;
+}
+
+.screenshot-item__caption {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-style: italic;
+  color: var(--text-primary);
+  text-align: center;
+  max-width: 260px;
+  margin: 0;
+}
+
+/* Center the track content */
+.screenshots-carousel::before,
+.screenshots-carousel::after {
+  content: '';
+  flex: 0 0 calc(50vw - 130px - var(--space-xl));
+}
+
+@media (min-width: 1400px) {
+  .screenshots-track {
+    justify-content: center;
+  }
+  
+  .screenshots-carousel::before,
+  .screenshots-carousel::after {
+    display: none;
+  }
+}
+
+/* ============================================
+   Features Section
+   ============================================ */
+
+.how-it-works {
+  background: var(--bg-primary);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-xl);
+}
+
+.feature-card {
+  text-align: center;
+  padding: var(--space-xl);
+}
+
+.feature-card__icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto var(--space-lg);
+  color: var(--text-primary);
+}
+
+.feature-card__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.feature-card__title {
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: var(--space-sm);
+  color: var(--text-primary);
+}
+
+.feature-card__description {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  max-width: none;
+}
+
+/* ============================================
+   Categories Section
+   ============================================ */
+
+.categories {
+  background: var(--bg-secondary);
+}
+
+.categories-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-md);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.category-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-lg);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  transition: all var(--transition-base);
+}
+
+.category-pill:hover {
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-sm);
+}
+
+.category-pill__icon {
+  font-size: 1.125rem;
+}
+
+.category-pill--more {
+  background: var(--accent-soft);
+  border-color: transparent;
+  color: var(--text-secondary);
+}
+
+/* ============================================
+   Experience Section
+   ============================================ */
+
+.experience {
+  background: var(--bg-primary);
+}
+
+.experience__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4xl);
+  align-items: center;
+}
+
+.experience__content h2 {
+  margin-bottom: var(--space-lg);
+}
+
+.experience__lead {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  margin-bottom: var(--space-2xl);
+  max-width: 480px;
+}
+
+.experience__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.experience__list li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-sm) 0;
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
+
+.experience__check {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.experience__visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Experience Phones - Stacked phones visual */
+.experience-phones {
+  position: relative;
+  width: 420px;
+  height: 520px;
+}
+
+.experience-phones__back,
+.experience-phones__front {
+  position: absolute;
+  border-radius: 24px;
+  box-shadow: var(--shadow-xl);
+  transition: transform var(--transition-slow);
+}
+
+.experience-phones__back {
+  width: 240px;
+  height: auto;
+  top: 0;
+  left: 0;
+  transform: rotate(-6deg);
+  z-index: 1;
+}
+
+.experience-phones__front {
+  width: 260px;
+  height: auto;
+  bottom: 0;
+  right: 0;
+  transform: rotate(4deg);
+  z-index: 2;
+}
+
+.experience-phones:hover .experience-phones__back {
+  transform: rotate(-3deg) translateX(-10px);
+}
+
+.experience-phones:hover .experience-phones__front {
+  transform: rotate(2deg) translateX(10px);
+}
+
+/* ============================================
+   Pricing Section
+   ============================================ */
+
+.pricing {
+  background: var(--bg-secondary);
+}
+
+.pricing-comparison {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.pricing-tier {
+  position: relative;
+  padding: var(--space-2xl);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-base);
+}
+
+.pricing-tier:hover {
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-md);
+}
+
+.pricing-tier--premium {
+  border-color: var(--accent);
+}
+
+.pricing-tier__badge {
+  position: absolute;
+  top: calc(var(--space-lg) * -1);
+  left: 50%;
+  transform: translateX(-50%);
+  padding: var(--space-xs) var(--space-md);
+  background: var(--accent);
+  color: var(--text-inverse);
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.pricing-tier__header {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+  padding-bottom: var(--space-xl);
+  border-bottom: 1px solid var(--border);
+}
+
+.pricing-tier__header h3 {
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: var(--space-sm);
+  color: var(--text-primary);
+}
+
+.pricing-tier__price {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.pricing-tier__features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pricing-tier__features li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) 0;
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+}
+
+.pricing-tier__features li::before {
+  content: '✓';
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* ============================================
+   Final CTA Section
+   ============================================ */
+
+.final-cta {
+  background: var(--bg-tertiary);
+}
+
+.final-cta__content {
+  text-align: center;
+  padding: var(--space-4xl) 0;
+}
+
+.final-cta__content h2 {
+  margin-bottom: var(--space-md);
+}
+
+.final-cta__content p {
+  margin: 0 auto var(--space-2xl);
+}
+
+.final-cta__content .app-store-btn {
+  display: inline-flex;
+}
+
+/* ============================================
+   Responsive Styles
+   ============================================ */
+
+@media (max-width: 1024px) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .screenshot-item__image {
+    width: 220px;
+  }
+  
+  .screenshot-item__caption {
+    font-size: 1rem;
+    max-width: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+    padding-top: calc(80px + var(--space-3xl));
+    padding-bottom: var(--space-3xl);
+  }
+
+  .hero .container {
+    grid-template-columns: 1fr;
+    gap: var(--space-3xl);
+  }
+
+  .hero__content {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .hero__subtitle {
+    margin: 0 auto var(--space-2xl);
+  }
+
+  .hero__cta {
+    justify-content: center;
+  }
+
+  .hero-phone__image {
+    width: 280px;
+  }
+
+  .screenshot-item__image {
+    width: 200px;
+  }
+  
+  .screenshot-item__caption {
+    font-size: 0.9375rem;
+    max-width: 200px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .feature-card {
+    padding: var(--space-lg);
+  }
+
+  .experience__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-3xl);
+  }
+
+  .experience__content {
+    text-align: center;
+    order: 1;
+  }
+
+  .experience__visual {
+    order: 2;
+  }
+
+  .experience__lead {
+    margin: 0 auto var(--space-2xl);
+  }
+
+  .experience__list {
+    display: inline-block;
+    text-align: left;
+  }
+
+  .experience-phones {
+    width: 320px;
+    height: 420px;
+  }
+
+  .experience-phones__back {
+    width: 180px;
+  }
+
+  .experience-phones__front {
+    width: 200px;
+  }
+
+  .pricing-comparison {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-tier--premium {
+    order: -1;
+    margin-top: var(--space-lg);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-phone__image {
+    width: 240px;
+    border-radius: 20px;
+  }
+
+  .screenshot-item__image {
+    width: 180px;
+    border-radius: 20px;
+  }
+  
+  .screenshot-item__caption {
+    font-size: 0.875rem;
+    max-width: 180px;
+  }
+  
+  .screenshots-track {
+    gap: var(--space-lg);
+  }
+
+  .categories-grid {
+    gap: var(--space-sm);
+  }
+
+  .category-pill {
+    font-size: 0.875rem;
+    padding: var(--space-xs) var(--space-md);
+  }
+
+  .experience-phones {
+    width: 280px;
+    height: 380px;
+  }
+
+  .experience-phones__back {
+    width: 160px;
+  }
+
+  .experience-phones__front {
+    width: 180px;
+  }
+}

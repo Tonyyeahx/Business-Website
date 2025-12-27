@@ -1,34 +1,39 @@
 import { Link } from 'react-router-dom'
+import './Footer.css'
 
 function Footer() {
+  const currentYear = new Date().getFullYear()
+
   return (
-    <footer>
-      <div className="footer-content">
-        <div className="footer-section">
-          <h3>Facto</h3>
-          <p style={{ color: 'rgba(255, 255, 255, 0.8)', lineHeight: '1.7' }}>
-            Building innovative digital solutions that make a difference in people's lives.
+    <footer className="footer">
+      <div className="container">
+        <div className="footer__inner">
+          <div className="footer__brand">
+            <Link to="/" className="footer__logo">
+              <span className="footer__logo-text">Facto</span>
+            </Link>
+            <p className="footer__tagline">
+              Discover interesting facts, one swipe at a time.
+            </p>
+          </div>
+
+          <nav className="footer__nav">
+            <div className="footer__links">
+              <Link to="/privacy-policy">Privacy Policy</Link>
+              <Link to="/terms-and-conditions">Terms & Conditions</Link>
+              <a href="mailto:contact@facto-app.com">Contact</a>
+            </div>
+          </nav>
+        </div>
+
+        <div className="footer__bottom">
+          <p className="footer__copyright">
+            © {currentYear} Facto. All rights reserved.
           </p>
         </div>
-        <div className="footer-section">
-          <h3>Products</h3>
-          <ul>
-            <li><Link to="/facto">Facto</Link></li>
-          </ul>
-        </div>
-        <div className="footer-section">
-          <h3>Contact</h3>
-          <ul>
-            <li><a href="mailto:contact@facto-app.com">contact@facto-app.com</a></li>
-          </ul>
-        </div>
-      </div>
-      <div className="footer-bottom">
-        <p>&copy; 2025 Facto. All rights reserved.</p>
       </div>
     </footer>
   )
 }
 
 export default Footer
-
