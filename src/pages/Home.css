@@ -130,14 +130,12 @@
 
 .screenshots-carousel {
   position: relative;
-  margin: 0 calc(var(--space-lg) * -1);
-  padding: 0 var(--space-lg);
 }
 
 .screenshots-track {
   display: flex;
   gap: var(--space-xl);
-  padding: var(--space-lg) 0;
+  padding: var(--space-lg) var(--space-lg);
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
@@ -145,6 +143,21 @@
   -webkit-overflow-scrolling: touch;
   cursor: grab;
   user-select: none;
+}
+
+/* Add padding to ensure first and last items are fully visible */
+.screenshots-track::before,
+.screenshots-track::after {
+  content: '';
+  flex-shrink: 0;
+  width: max(0px, calc((100vw - var(--container-max)) / 2));
+}
+
+@media (max-width: 1200px) {
+  .screenshots-track::before,
+  .screenshots-track::after {
+    width: 0;
+  }
 }
 
 .screenshots-track--dragging {
@@ -197,11 +210,11 @@
 }
 
 .screenshots-nav--left {
-  left: var(--space-md);
+  left: var(--space-lg);
 }
 
 .screenshots-nav--right {
-  right: var(--space-md);
+  right: var(--space-lg);
 }
 
 .screenshots-nav--hidden {
@@ -249,20 +262,14 @@
   margin: 0;
 }
 
-/* Center the track content */
-.screenshots-carousel::before,
-.screenshots-carousel::after {
-  content: '';
-  flex: 0 0 calc(50vw - 130px - var(--space-xl));
-}
-
-@media (min-width: 1400px) {
+/* Center screenshots on large screens when all fit */
+@media (min-width: 1600px) {
   .screenshots-track {
     justify-content: center;
   }
   
-  .screenshots-carousel::before,
-  .screenshots-carousel::after {
+  .screenshots-track::before,
+  .screenshots-track::after {
     display: none;
   }
 }
