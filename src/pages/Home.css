@@ -511,6 +511,7 @@
    Responsive Styles
    ============================================ */
 
+/* Large tablets and small desktops */
 @media (max-width: 1024px) {
   .features-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -524,27 +525,64 @@
     font-size: 1rem;
     max-width: 220px;
   }
+  
+  .experience__grid {
+    gap: var(--space-2xl);
+  }
+  
+  .experience-phones {
+    width: 360px;
+    height: 460px;
+  }
 }
 
+/* Tablets */
 @media (max-width: 768px) {
+  /* Section spacing adjustments */
+  .section-header {
+    margin-bottom: var(--space-2xl);
+  }
+  
+  .section-header h2 {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+  }
+  
+  /* Hero Section - Mobile First */
   .hero {
     min-height: auto;
-    padding-top: calc(80px + var(--space-3xl));
-    padding-bottom: var(--space-3xl);
+    padding-top: calc(70px + var(--space-2xl));
+    padding-bottom: var(--space-2xl);
   }
 
   .hero .container {
     grid-template-columns: 1fr;
-    gap: var(--space-3xl);
+    gap: var(--space-2xl);
   }
 
   .hero__content {
     text-align: center;
     margin: 0 auto;
+    order: 1;
+  }
+  
+  .hero__visual {
+    order: 2;
+  }
+  
+  .hero__eyebrow {
+    font-size: 0.75rem;
+    margin-bottom: var(--space-md);
+  }
+  
+  .hero__title {
+    font-size: clamp(2rem, 8vw, 2.75rem);
+    margin-bottom: var(--space-lg);
   }
 
   .hero__subtitle {
-    margin: 0 auto var(--space-2xl);
+    font-size: 1rem;
+    margin: 0 auto var(--space-xl);
+    max-width: 90%;
   }
 
   .hero__cta {
@@ -552,9 +590,10 @@
   }
 
   .hero-phone__image {
-    width: 280px;
+    width: 260px;
   }
 
+  /* Screenshots Section */
   .screenshot-item__image {
     width: 200px;
   }
@@ -564,18 +603,34 @@
     max-width: 200px;
   }
 
+  /* Features Grid - 2 columns on tablet */
   .features-grid {
-    grid-template-columns: 1fr;
-    gap: var(--space-lg);
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
   }
 
   .feature-card {
     padding: var(--space-lg);
   }
+  
+  .feature-card__icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: var(--space-md);
+  }
+  
+  .feature-card__title {
+    font-size: 1rem;
+  }
+  
+  .feature-card__description {
+    font-size: 0.875rem;
+  }
 
+  /* Experience Section */
   .experience__grid {
     grid-template-columns: 1fr;
-    gap: var(--space-3xl);
+    gap: var(--space-2xl);
   }
 
   .experience__content {
@@ -588,76 +643,315 @@
   }
 
   .experience__lead {
-    margin: 0 auto var(--space-2xl);
+    font-size: 1rem;
+    margin: 0 auto var(--space-xl);
   }
 
   .experience__list {
     display: inline-block;
     text-align: left;
   }
+  
+  .experience__list li {
+    font-size: 0.9375rem;
+  }
 
   .experience-phones {
-    width: 320px;
-    height: 420px;
+    width: 300px;
+    height: 400px;
   }
 
   .experience-phones__back {
-    width: 180px;
+    width: 170px;
   }
 
   .experience-phones__front {
-    width: 200px;
+    width: 190px;
   }
 
+  /* Pricing Section */
   .pricing-comparison {
     grid-template-columns: 1fr;
+    max-width: 400px;
   }
 
   .pricing-tier--premium {
     order: -1;
     margin-top: var(--space-lg);
   }
-}
-
-@media (max-width: 480px) {
-  .hero-phone__image {
-    width: 240px;
-    border-radius: 20px;
-  }
-
-  .screenshot-item__image {
-    width: 180px;
-    border-radius: 20px;
+  
+  .pricing-tier {
+    padding: var(--space-xl);
   }
   
-  .screenshot-item__caption {
-    font-size: 0.875rem;
-    max-width: 180px;
-  }
-  
-  .screenshots-track {
-    gap: var(--space-lg);
-  }
-
+  /* Categories */
   .categories-grid {
     gap: var(--space-sm);
   }
+  
+  /* Final CTA */
+  .final-cta__content {
+    padding: var(--space-2xl) 0;
+  }
+  
+  .final-cta__content h2 {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+  }
+  
+  .final-cta__content p {
+    font-size: 1rem;
+  }
+}
 
-  .category-pill {
-    font-size: 0.875rem;
-    padding: var(--space-xs) var(--space-md);
+/* Mobile phones */
+@media (max-width: 480px) {
+  /* Hero adjustments */
+  .hero {
+    padding-top: calc(60px + var(--space-xl));
+    padding-bottom: var(--space-xl);
+  }
+  
+  .hero-phone__image {
+    width: 220px;
+    border-radius: 20px;
+  }
+  
+  .hero__title {
+    font-size: 1.875rem;
+  }
+  
+  .hero__subtitle {
+    font-size: 0.9375rem;
   }
 
+  /* Screenshots */
+  .screenshot-item__image {
+    width: 160px;
+    border-radius: 18px;
+  }
+  
+  .screenshot-item__caption {
+    font-size: 0.8125rem;
+    max-width: 160px;
+  }
+  
+  .screenshots-track {
+    gap: var(--space-md);
+    padding: var(--space-md) 0;
+  }
+  
+  /* Features - single column on small phones */
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+  
+  .feature-card {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+    gap: var(--space-md);
+    padding: var(--space-md);
+  }
+  
+  .feature-card__icon {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    margin: 0;
+  }
+  
+  .feature-card__content {
+    flex: 1;
+  }
+
+  /* Categories */
+  .categories-grid {
+    gap: var(--space-xs);
+  }
+
+  .category-pill {
+    font-size: 0.8125rem;
+    padding: var(--space-xs) var(--space-sm);
+  }
+  
+  .category-pill__icon {
+    font-size: 1rem;
+  }
+
+  /* Experience phones */
   .experience-phones {
-    width: 280px;
-    height: 380px;
+    width: 260px;
+    height: 340px;
   }
 
   .experience-phones__back {
-    width: 160px;
+    width: 150px;
   }
 
   .experience-phones__front {
+    width: 165px;
+  }
+  
+  /* Pricing */
+  .pricing-tier {
+    padding: var(--space-lg);
+  }
+  
+  .pricing-tier__header h3 {
+    font-size: 1.125rem;
+  }
+  
+  .pricing-tier__features li {
+    font-size: 0.875rem;
+  }
+  
+  /* App Store button mobile */
+  .app-store-btn {
+    padding: var(--space-sm) var(--space-lg);
+  }
+  
+  .app-store-btn svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .app-store-btn__text span:first-child {
+    font-size: 0.625rem;
+  }
+  
+  .app-store-btn__text span:last-child {
+    font-size: 1rem;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 360px) {
+  .hero-phone__image {
+    width: 200px;
+  }
+  
+  .hero__title {
+    font-size: 1.625rem;
+  }
+  
+  .screenshot-item__image {
+    width: 140px;
+  }
+  
+  .experience-phones {
+    width: 240px;
+    height: 310px;
+  }
+  
+  .experience-phones__back {
+    width: 130px;
+  }
+  
+  .experience-phones__front {
+    width: 145px;
+  }
+}
+
+/* ============================================
+   Touch-friendly interactions for mobile
+   ============================================ */
+
+@media (hover: none) and (pointer: coarse) {
+  /* Increase tap targets */
+  .category-pill {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .btn {
+    min-height: 44px;
+  }
+  
+  /* Disable hover effects on touch devices */
+  .screenshot-item:hover .screenshot-item__image-wrapper {
+    transform: none;
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .pricing-tier:hover {
+    border-color: var(--border);
+    box-shadow: none;
+  }
+  
+  .pricing-tier--premium:hover {
+    border-color: var(--accent);
+  }
+  
+  /* Add active states for touch feedback */
+  .screenshot-item__image-wrapper:active {
+    transform: scale(0.98);
+  }
+  
+  .category-pill:active {
+    transform: scale(0.95);
+    background: var(--accent-soft);
+  }
+  
+  .btn:active {
+    transform: scale(0.97);
+  }
+  
+  .app-store-btn:active {
+    transform: scale(0.98);
+  }
+  
+  /* Experience phones - no hover animation on touch */
+  .experience-phones:hover .experience-phones__back,
+  .experience-phones:hover .experience-phones__front {
+    transform: rotate(-6deg);
+  }
+  
+  .experience-phones:hover .experience-phones__front {
+    transform: rotate(4deg);
+  }
+}
+
+/* ============================================
+   Landscape mode on phones
+   ============================================ */
+
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero {
+    min-height: auto;
+    padding-top: calc(60px + var(--space-lg));
+    padding-bottom: var(--space-lg);
+  }
+  
+  .hero .container {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+  }
+  
+  .hero__content {
+    text-align: left;
+    order: 1;
+  }
+  
+  .hero__visual {
+    order: 2;
+  }
+  
+  .hero__cta {
+    justify-content: flex-start;
+  }
+  
+  .hero-phone__image {
     width: 180px;
+  }
+  
+  .hero__title {
+    font-size: 1.75rem;
+  }
+  
+  section {
+    padding: var(--space-2xl) 0;
   }
 }

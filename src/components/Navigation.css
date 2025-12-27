@@ -18,6 +18,10 @@
   padding: var(--space-md) 0;
 }
 
+.nav--menu-open {
+  background: var(--bg-primary);
+}
+
 @supports (backdrop-filter: blur(20px)) {
   .nav--scrolled {
     background: rgba(250, 250, 250, 0.8);
@@ -42,6 +46,7 @@
   display: flex;
   align-items: center;
   text-decoration: none;
+  z-index: 1001;
 }
 
 .nav__logo-text {
@@ -64,6 +69,126 @@
 }
 
 /* ============================================
+   Mobile Menu Toggle (Hamburger)
+   ============================================ */
+
+.nav__mobile-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+  gap: 5px;
+}
+
+.nav__mobile-toggle-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--text-primary);
+  border-radius: 2px;
+  transition: all var(--transition-base);
+  transform-origin: center;
+}
+
+.nav__mobile-toggle--active .nav__mobile-toggle-bar:nth-child(1) {
+  transform: rotate(45deg) translateY(5px);
+}
+
+.nav__mobile-toggle--active .nav__mobile-toggle-bar:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.nav__mobile-toggle--active .nav__mobile-toggle-bar:nth-child(3) {
+  transform: rotate(-45deg) translateY(-5px);
+}
+
+/* ============================================
+   Mobile Menu Overlay
+   ============================================ */
+
+.nav__mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--bg-primary);
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-base), visibility var(--transition-base);
+}
+
+.nav__mobile-menu--open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav__mobile-menu-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: calc(80px + var(--space-xl)) var(--space-xl) var(--space-xl);
+  gap: var(--space-3xl);
+}
+
+.nav__mobile-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.nav__mobile-link {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+  position: relative;
+}
+
+.nav__mobile-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width var(--transition-base);
+}
+
+.nav__mobile-link:hover::after {
+  width: 100%;
+}
+
+.nav__mobile-link:hover {
+  opacity: 1;
+  color: var(--text-primary);
+}
+
+.nav__mobile-cta {
+  margin-top: var(--space-xl);
+}
+
+.app-store-btn--mobile {
+  padding: var(--space-lg) var(--space-2xl);
+}
+
+/* ============================================
    Mobile Styles
    ============================================ */
 
@@ -80,8 +205,24 @@
     font-size: 1.25rem;
   }
   
+  /* Hide desktop actions, show mobile toggle */
+  .nav__actions--desktop {
+    display: none;
+  }
+  
+  .nav__mobile-toggle {
+    display: flex;
+  }
+  
+  .nav__mobile-menu {
+    display: block;
+  }
+}
+
+/* Tablet adjustments */
+@media (max-width: 1024px) and (min-width: 769px) {
   .btn--nav {
-    padding: var(--space-xs) var(--space-md);
+    padding: var(--space-sm) var(--space-md);
     font-size: 0.8125rem;
   }
 }
