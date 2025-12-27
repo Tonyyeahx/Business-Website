@@ -1,8 +1,14 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import './Home.css'
 
 function Home() {
   const screenshotsRef = useRef(null)
+  const trackRef = useRef(null)
+  const [canScrollLeft, setCanScrollLeft] = useState(false)
+  const [canScrollRight, setCanScrollRight] = useState(true)
+  const [isDragging, setIsDragging] = useState(false)
+  const [startX, setStartX] = useState(0)
+  const [scrollLeft, setScrollLeft] = useState(0)
 
   useEffect(() => {
     // Intersection Observer for scroll animations
@@ -25,6 +31,75 @@ function Home() {
 
     return () => observer.disconnect()
   }, [])
+
+  // Update scroll button states
+  const updateScrollButtons = () => {
+    if (trackRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = trackRef.current
+      setCanScrollLeft(scrollLeft > 0)
+      setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 10)
+    }
+  }
+
+  useEffect(() => {
+    const track = trackRef.current
+    if (track) {
+      track.addEventListener('scroll', updateScrollButtons)
+      updateScrollButtons()
+      
+      // Update on resize
+      window.addEventListener('resize', updateScrollButtons)
+      
+      return () => {
+        track.removeEventListener('scroll', updateScrollButtons)
+        window.removeEventListener('resize', updateScrollButtons)
+      }
+    }
+  }, [])
+
+  // Scroll carousel left/right
+  const scrollCarousel = (direction) => {
+    if (trackRef.current) {
+      const scrollAmount = 300
+      trackRef.current.scrollBy({
+        left: direction === 'left' ? -scrollAmount : scrollAmount,
+        behavior: 'smooth'
+      })
+    }
+  }
+
+  // Mouse drag functionality for desktop
+  const handleMouseDown = (e) => {
+    if (!trackRef.current) return
+    setIsDragging(true)
+    setStartX(e.pageX - trackRef.current.offsetLeft)
+    setScrollLeft(trackRef.current.scrollLeft)
+    trackRef.current.style.cursor = 'grabbing'
+  }
+
+  const handleMouseUp = () => {
+    setIsDragging(false)
+    if (trackRef.current) {
+      trackRef.current.style.cursor = 'grab'
+    }
+  }
+
+  const handleMouseMove = (e) => {
+    if (!isDragging || !trackRef.current) return
+    e.preventDefault()
+    const x = e.pageX - trackRef.current.offsetLeft
+    const walk = (x - startX) * 1.5 // Scroll speed multiplier
+    trackRef.current.scrollLeft = scrollLeft - walk
+  }
+
+  const handleMouseLeave = () => {
+    if (isDragging) {
+      setIsDragging(false)
+      if (trackRef.current) {
+        trackRef.current.style.cursor = 'grab'
+      }
+    }
+  }
 
   const categories = [
     { name: 'Science', icon: '🔬' },
@@ -164,7 +239,25 @@ function Home() {
           </div>
           
           <div className="screenshots-carousel">
-            <div className="screenshots-track">
+            {/* Left Arrow */}
+            <button 
+              className={`screenshots-nav screenshots-nav--left ${!canScrollLeft ? 'screenshots-nav--hidden' : ''}`}
+              onClick={() => scrollCarousel('left')}
+              aria-label="Scroll left"
+            >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </button>
+            
+            <div 
+              className={`screenshots-track ${isDragging ? 'screenshots-track--dragging' : ''}`}
+              ref={trackRef}
+              onMouseDown={handleMouseDown}
+              onMouseUp={handleMouseUp}
+              onMouseMove={handleMouseMove}
+              onMouseLeave={handleMouseLeave}
+            >
               {screenshots.map((screenshot, index) => (
                 <div key={index} className="screenshot-item">
                   <div className="screenshot-item__image-wrapper">
@@ -173,12 +266,24 @@ function Home() {
                       alt={screenshot.alt}
                       className="screenshot-item__image"
                       loading="lazy"
+                      draggable="false"
                     />
                   </div>
                   <p className="screenshot-item__caption">{screenshot.title}</p>
                 </div>
               ))}
             </div>
+            
+            {/* Right Arrow */}
+            <button 
+              className={`screenshots-nav screenshots-nav--right ${!canScrollRight ? 'screenshots-nav--hidden' : ''}`}
+              onClick={() => scrollCarousel('right')}
+              aria-label="Scroll right"
+            >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
           </div>
         </div>
       </section>
