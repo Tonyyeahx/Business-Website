@@ -107,18 +107,80 @@
   align-items: center;
 }
 
-/* Hero Phone - Using actual screenshot */
+/* Hero Phone - iPhone Frame */
 .hero-phone {
   position: relative;
   animation: float 6s ease-in-out infinite;
 }
 
-.hero-phone__image {
+.hero-phone__frame {
+  position: relative;
+  width: 280px;
+  height: 600px;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+  border-radius: 38px;
+  padding: 6px;
+  box-shadow: 
+    0 0 0 1px rgba(255, 255, 255, 0.08),
+    0 0 0 2px rgba(0, 0, 0, 0.3),
+    0 30px 60px -15px rgba(0, 0, 0, 0.6),
+    0 15px 30px -10px rgba(0, 0, 0, 0.4),
+    0 5px 15px rgba(0, 0, 0, 0.3),
+    inset 0 1px 2px rgba(255, 255, 255, 0.15),
+    inset 0 -1px 2px rgba(0, 0, 0, 0.4),
+    inset 0 0 20px rgba(0, 0, 0, 0.2);
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3));
+}
+
+.hero-phone__notch {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 28px;
+  background: #000;
+  border-radius: 20px;
+  z-index: 10;
+  box-shadow: 
+    inset 0 -1px 2px rgba(255, 255, 255, 0.05),
+    0 2px 8px rgba(0, 0, 0, 0.4),
+    inset 0 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+/* Camera dot in notch */
+.hero-phone__notch::before {
+  content: '';
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  background: radial-gradient(circle at 30% 30%, #2a4a6a, #0a1a2a);
+  border-radius: 50%;
+  box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+.hero-phone__screen {
   width: 100%;
-  max-width: 320px;
-  height: auto;
+  height: 100%;
+  background: #000;
+  border-radius: 32px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 
+    inset 0 0 30px rgba(0, 0, 0, 0.8),
+    inset 0 2px 4px rgba(0, 0, 0, 0.6),
+    0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.hero-phone__screenshot {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
   display: block;
-  /* No border-radius or box-shadow since image1.png already includes device frame with transparency */
 }
 
 /* ============================================
@@ -687,8 +749,21 @@
     justify-content: center;
   }
 
-  .hero-device {
-    width: 280px;
+  .hero-phone__frame {
+    width: 240px;
+    height: 500px;
+    border-radius: 34px;
+    padding: 5px;
+  }
+  
+  .hero-phone__notch {
+    width: 85px;
+    height: 24px;
+    top: 14px;
+  }
+  
+  .hero-phone__screen {
+    border-radius: 28px;
   }
 
   /* Screenshots Section */
@@ -816,9 +891,30 @@
   }
   
   
-  .hero-device {
-    width: 240px;
+  .hero-phone__frame {
+    width: 200px;
+    height: 420px;
+    border-radius: 30px;
+    padding: 4px;
   }
+  
+  .hero-phone__notch {
+    width: 70px;
+    height: 20px;
+    top: 12px;
+    border-radius: 14px;
+  }
+  
+  .hero-phone__notch::before {
+    width: 8px;
+    height: 8px;
+    right: 16px;
+  }
+  
+  .hero-phone__screen {
+    border-radius: 24px;
+  }
+  
   
   .hero__title {
     font-size: 1.875rem;
@@ -932,8 +1028,22 @@
 
 /* Extra small phones */
 @media (max-width: 360px) {
-  .hero-device {
-    width: 220px;
+  .hero-phone__frame {
+    width: 180px;
+    height: 380px;
+    border-radius: 28px;
+    padding: 4px;
+  }
+  
+  .hero-phone__notch {
+    width: 60px;
+    height: 18px;
+    top: 10px;
+    border-radius: 12px;
+  }
+  
+  .hero-phone__screen {
+    border-radius: 22px;
   }
   
   .hero__title {
@@ -1057,8 +1167,9 @@
     justify-content: flex-start;
   }
   
-  .hero-device {
+  .hero-phone__frame {
     width: 200px;
+    height: 420px;
   }
   
   .hero__title {

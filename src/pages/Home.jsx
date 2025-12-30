@@ -226,11 +226,16 @@ function Home() {
           
           <div className="hero__visual animate-fade-in stagger-4">
             <div className="hero-phone">
+              <div className="hero-phone__frame">
+                <div className="hero-phone__notch"></div>
+                <div className="hero-phone__screen">
                   <img
-                    src="/screenshots/image1.png"
+                    src="/screenshots/P1.png"
                     alt="Facto app categories selection"
-                    className="hero-phone__image"
+                    className="hero-phone__screenshot"
                   />
+                </div>
+              </div>
             </div>
           </div>
         </div>
