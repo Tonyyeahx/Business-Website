@@ -1,4 +1,10 @@
+import { useEffect } from 'react'
+
 function PrivacyPolicy() {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <main className="legal-page">
       <div className="container">
