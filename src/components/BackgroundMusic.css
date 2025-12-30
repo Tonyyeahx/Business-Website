@@ -4,6 +4,13 @@
   right: 24px;
   z-index: 1000;
   transition: all 0.3s ease;
+  /* Ensure clickable during scroll animations */
+  pointer-events: auto;
+  touch-action: manipulation;
+  /* Create independent stacking context to prevent scroll-blocking */
+  will-change: transform;
+  transform: translateZ(0);
+  isolation: isolate;
 }
 
 .background-music__controls {
@@ -22,6 +29,8 @@
     inset 0 -1px 0 rgba(255, 255, 255, 0.2);
   transition: all 0.3s ease;
   position: relative;
+  /* Ensure clickable during scroll animations */
+  pointer-events: auto;
 }
 
 .background-music__controls::before {
@@ -63,6 +72,9 @@
   height: 40px;
   position: relative;
   z-index: 1;
+  /* Ensure clickable during scroll animations */
+  pointer-events: auto;
+  touch-action: manipulation;
 }
 
 .background-music__toggle:hover,
