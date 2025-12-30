@@ -226,11 +226,11 @@ function Home() {
           
           <div className="hero__visual animate-fade-in stagger-4">
             <div className="hero-phone">
-              <img 
-                src="/screenshots/image1.jpg" 
-                alt="Facto app categories selection" 
-                className="hero-phone__image"
-              />
+                  <img
+                    src="/screenshots/image1.png"
+                    alt="Facto app categories selection"
+                    className="hero-phone__image"
+                  />
             </div>
           </div>
         </div>

@@ -28,7 +28,6 @@ function PrivacyPolicy() {
             <li><strong>Notification Settings:</strong> Your notification frequency preferences and quiet hours</li>
             <li><strong>App Settings:</strong> Auto-save preferences and other configuration options</li>
             <li><strong>Saved Facts:</strong> Facts you have saved to your collections</li>
-            <li><strong>Viewed Facts:</strong> Tracking of which facts you have viewed to avoid repetition</li>
           </ul>
 
           <h3>1.2 Information We Do NOT Collect</h3>
@@ -53,7 +52,6 @@ function PrivacyPolicy() {
             <li><strong>Personalization:</strong> Category preferences are used to filter and display relevant facts</li>
             <li><strong>Notification Delivery:</strong> Notification settings are used to schedule and deliver fact notifications at appropriate times</li>
             <li><strong>Collections Management:</strong> Saved facts are stored to allow you to revisit your favorite facts</li>
-            <li><strong>Avoid Repetition:</strong> Viewed facts are tracked to prevent showing the same fact multiple times</li>
             <li><strong>App Functionality:</strong> To provide and improve the core features of the app</li>
           </ul>
 
@@ -164,7 +162,6 @@ function PrivacyPolicy() {
           <ul>
             <li><strong>Local Storage:</strong> All data is stored locally on your device and deleted when you uninstall the app</li>
             <li><strong>Saved Facts:</strong> Persist on your device until you delete them or uninstall the app</li>
-            <li><strong>Viewed Facts History:</strong> Retained locally to improve user experience by avoiding duplicate facts</li>
           </ul>
 
           <h2>10. Changes to This Privacy Policy</h2>

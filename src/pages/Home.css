@@ -112,11 +112,10 @@
 }
 
 .hero-phone__image {
-  width: 320px;
-  height: auto;
-  border-radius: 24px;
-  box-shadow: var(--shadow-xl);
+  width: 800px;
+  height: 600px;
   display: block;
+  /* No border-radius or box-shadow since image1.png already includes device frame with transparency */
 }
 
 /* ============================================
@@ -677,8 +676,8 @@
     justify-content: center;
   }
 
-  .hero-phone__image {
-    width: 260px;
+  .hero-device {
+    width: 280px;
   }
 
   /* Screenshots Section */
@@ -799,9 +798,8 @@
     padding-bottom: var(--space-xl);
   }
   
-  .hero-phone__image {
-    width: 220px;
-    border-radius: 20px;
+  .hero-device {
+    width: 240px;
   }
   
   .hero__title {
@@ -916,8 +914,8 @@
 
 /* Extra small phones */
 @media (max-width: 360px) {
-  .hero-phone__image {
-    width: 200px;
+  .hero-device {
+    width: 220px;
   }
   
   .hero__title {
@@ -1041,8 +1039,8 @@
     justify-content: flex-start;
   }
   
-  .hero-phone__image {
-    width: 180px;
+  .hero-device {
+    width: 200px;
   }
   
   .hero__title {
