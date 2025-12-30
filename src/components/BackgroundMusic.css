@@ -94,75 +94,6 @@
   white-space: nowrap;
 }
 
-.background-music__volume-control {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  opacity: 0;
-  width: 0;
-  overflow: hidden;
-  transition: all 0.3s ease;
-}
-
-.background-music--expanded .background-music__volume-control {
-  opacity: 1;
-  width: 120px;
-}
-
-.background-music__volume-label {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  color: #333;
-}
-
-.background-music__volume-label svg {
-  width: 18px;
-  height: 18px;
-}
-
-.background-music__volume-slider {
-  flex: 1;
-  height: 4px;
-  border-radius: 2px;
-  background: rgba(0, 0, 0, 0.1);
-  outline: none;
-  -webkit-appearance: none;
-  appearance: none;
-  cursor: pointer;
-}
-
-.background-music__volume-slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background: #333;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.background-music__volume-slider::-webkit-slider-thumb:hover {
-  transform: scale(1.2);
-  background: #000;
-}
-
-.background-music__volume-slider::-moz-range-thumb {
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background: #333;
-  cursor: pointer;
-  border: none;
-  transition: all 0.2s ease;
-}
-
-.background-music__volume-slider::-moz-range-thumb:hover {
-  transform: scale(1.2);
-  background: #000;
-}
-
 /* Dark mode support */
 @media (prefers-color-scheme: dark) {
   .background-music__controls {
@@ -172,8 +103,7 @@
 
   .background-music__toggle,
   .background-music__settings,
-  .background-music__nav-button,
-  .background-music__volume-label {
+  .background-music__nav-button {
     color: #fff;
   }
 
@@ -185,18 +115,6 @@
 
   .background-music__track-number {
     color: rgba(255, 255, 255, 0.7);
-  }
-
-  .background-music__volume-slider {
-    background: rgba(255, 255, 255, 0.2);
-  }
-
-  .background-music__volume-slider::-webkit-slider-thumb {
-    background: #fff;
-  }
-
-  .background-music__volume-slider::-moz-range-thumb {
-    background: #fff;
   }
 }
 
@@ -232,10 +150,6 @@
 
   .background-music--expanded .background-music__nav-button {
     width: 36px;
-  }
-
-  .background-music--expanded .background-music__volume-control {
-    width: 100px;
   }
 }
 
