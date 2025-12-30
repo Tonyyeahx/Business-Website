@@ -19,7 +19,9 @@
 }
 
 .nav--menu-open {
-  background: var(--bg-primary);
+  background: var(--bg-primary) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
 }
 
 @supports (backdrop-filter: blur(20px)) {
@@ -29,9 +31,20 @@
     -webkit-backdrop-filter: blur(20px);
   }
   
+  /* When menu is open, use solid background instead of blur */
+  .nav--scrolled.nav--menu-open {
+    background: #fafafa;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+  
   @media (prefers-color-scheme: dark) {
     .nav--scrolled {
       background: rgba(10, 10, 10, 0.8);
+    }
+    
+    .nav--scrolled.nav--menu-open {
+      background: #0a0a0a;
     }
   }
 }
@@ -121,11 +134,27 @@
   left: 0;
   right: 0;
   bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
   background: var(--bg-primary);
   z-index: 999;
   opacity: 0;
   visibility: hidden;
   transition: opacity var(--transition-base), visibility var(--transition-base);
+}
+
+/* Ensure mobile menu has solid background in both light and dark modes */
+@media (prefers-color-scheme: light) {
+  .nav__mobile-menu {
+    background: #fafafa;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .nav__mobile-menu {
+    background: #0a0a0a;
+  }
 }
 
 .nav__mobile-menu--open {
