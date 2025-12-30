@@ -112,8 +112,8 @@
 }
 
 .hero-phone__image {
-  width: 800px;
-  height: 600px;
+  width: 960px;
+  height: 720px;
   display: block;
   /* No border-radius or box-shadow since image1.png already includes device frame with transparency */
 }
