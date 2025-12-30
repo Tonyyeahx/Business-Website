@@ -70,6 +70,21 @@ function BackgroundMusic() {
     }
   }, [volume])
 
+  // Pause music when user switches to another tab/website
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      if (document.hidden && audioRef.current && !audioRef.current.paused) {
+        audioRef.current.pause()
+      }
+    }
+
+    document.addEventListener('visibilitychange', handleVisibilityChange)
+
+    return () => {
+      document.removeEventListener('visibilitychange', handleVisibilityChange)
+    }
+  }, [])
+
   // Handle play/pause
   const togglePlay = () => {
     if (audioRef.current) {
