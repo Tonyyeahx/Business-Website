@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
+import BackgroundMusic from './components/BackgroundMusic'
 import Home from './pages/Home'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 import TermsAndConditions from './pages/TermsAndConditions'
@@ -17,6 +18,7 @@ function App() {
           <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
         </Routes>
         <Footer />
+        <BackgroundMusic />
       </div>
     </Router>
   )

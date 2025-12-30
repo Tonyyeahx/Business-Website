@@ -1,0 +1,241 @@
+.background-music {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.background-music__controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50px;
+  padding: 8px 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.background-music--expanded .background-music__controls {
+  padding: 8px 20px;
+}
+
+.background-music__toggle,
+.background-music__settings,
+.background-music__nav-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  transition: all 0.2s ease;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.background-music__toggle:hover,
+.background-music__settings:hover,
+.background-music__nav-button:hover {
+  background: rgba(0, 0, 0, 0.05);
+  transform: scale(1.1);
+}
+
+.background-music__toggle:active,
+.background-music__settings:active,
+.background-music__nav-button:active {
+  transform: scale(0.95);
+}
+
+.background-music__toggle svg,
+.background-music__settings svg,
+.background-music__nav-button svg {
+  width: 20px;
+  height: 20px;
+}
+
+.background-music__nav-button {
+  opacity: 0;
+  width: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.background-music--expanded .background-music__nav-button {
+  opacity: 1;
+  width: 40px;
+}
+
+.background-music__track-info {
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  width: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.background-music--expanded .background-music__track-info {
+  opacity: 1;
+  width: auto;
+  margin: 0 4px;
+}
+
+.background-music__track-number {
+  font-size: 0.75rem;
+  color: #666;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.background-music__volume-control {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  opacity: 0;
+  width: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.background-music--expanded .background-music__volume-control {
+  opacity: 1;
+  width: 120px;
+}
+
+.background-music__volume-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #333;
+}
+
+.background-music__volume-label svg {
+  width: 18px;
+  height: 18px;
+}
+
+.background-music__volume-slider {
+  flex: 1;
+  height: 4px;
+  border-radius: 2px;
+  background: rgba(0, 0, 0, 0.1);
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+.background-music__volume-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #333;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.background-music__volume-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+  background: #000;
+}
+
+.background-music__volume-slider::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #333;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.background-music__volume-slider::-moz-range-thumb:hover {
+  transform: scale(1.2);
+  background: #000;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .background-music__controls {
+    background: rgba(30, 30, 30, 0.95);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .background-music__toggle,
+  .background-music__settings,
+  .background-music__nav-button,
+  .background-music__volume-label {
+    color: #fff;
+  }
+
+  .background-music__toggle:hover,
+  .background-music__settings:hover,
+  .background-music__nav-button:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .background-music__track-number {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .background-music__volume-slider {
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  .background-music__volume-slider::-webkit-slider-thumb {
+    background: #fff;
+  }
+
+  .background-music__volume-slider::-moz-range-thumb {
+    background: #fff;
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .background-music {
+    bottom: 16px;
+    right: 16px;
+  }
+
+  .background-music__controls {
+    padding: 6px 12px;
+  }
+
+  .background-music--expanded .background-music__controls {
+    padding: 6px 16px;
+  }
+
+  .background-music__toggle,
+  .background-music__settings,
+  .background-music__nav-button {
+    width: 36px;
+    height: 36px;
+    padding: 6px;
+  }
+
+  .background-music__toggle svg,
+  .background-music__settings svg,
+  .background-music__nav-button svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .background-music--expanded .background-music__nav-button {
+    width: 36px;
+  }
+
+  .background-music--expanded .background-music__volume-control {
+    width: 100px;
+  }
+}
+
