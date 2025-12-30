@@ -87,10 +87,10 @@ function Navigation() {
             <Link to="/" className="nav__mobile-link" onClick={() => setIsMobileMenuOpen(false)}>
               Home
             </Link>
-            <Link to="/privacy" className="nav__mobile-link" onClick={() => setIsMobileMenuOpen(false)}>
+            <Link to="/privacy-policy" className="nav__mobile-link" onClick={() => setIsMobileMenuOpen(false)}>
               Privacy Policy
             </Link>
-            <Link to="/terms" className="nav__mobile-link" onClick={() => setIsMobileMenuOpen(false)}>
+            <Link to="/terms-and-conditions" className="nav__mobile-link" onClick={() => setIsMobileMenuOpen(false)}>
               Terms & Conditions
             </Link>
           </nav>
