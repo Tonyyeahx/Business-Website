@@ -51,7 +51,7 @@ function Navigation() {
           <div className="nav__actions nav__actions--desktop">
             {isHome && (
               <a 
-                href="https://apps.apple.com/app/facto" 
+                href="https://apps.apple.com/app/id6755008918" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="btn btn--primary btn--nav"
@@ -97,7 +97,7 @@ function Navigation() {
           
           <div className="nav__mobile-cta">
             <a 
-              href="https://apps.apple.com/app/facto" 
+              href="https://apps.apple.com/app/id6755008918" 
               target="_blank" 
               rel="noopener noreferrer"
               className="app-store-btn app-store-btn--mobile"

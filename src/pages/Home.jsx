@@ -208,7 +208,7 @@ function Home() {
             </p>
             <div className="hero__cta animate-fade-in stagger-3">
               <a 
-                href="https://apps.apple.com/app/facto" 
+                href="https://apps.apple.com/app/id6755008918" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="app-store-btn"
@@ -437,7 +437,7 @@ function Home() {
             <h2>Ready to learn something new?</h2>
             <p>Download Facto and discover your first fact in seconds.</p>
             <a 
-              href="https://apps.apple.com/app/facto" 
+              href="https://apps.apple.com/app/id6755008918" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="app-store-btn"
